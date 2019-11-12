@@ -38,29 +38,6 @@ public class ImageClassIndex {
         return mapClassIndex.get(id);
     }
 
-    private Map<String, String> read()
-    {
-        Map<String, String> map = new HashMap<String, String>();
-        try {
-            InputStream in = this.getClass().getClassLoader().
-                    getResourceAsStream("class_index.txt");
-            InputStreamReader isr = new InputStreamReader(in);
-            BufferedReader br = new BufferedReader(isr);
-            String line;
-            while ((line = br.readLine()) != null) {
-                String columns[] = line.split(" ");
-                map.put(columns[1], columns[0]);
-            }
-            in.close();
-        }catch (IOException ex)
-        {
-            String errMsg = "Read class index file FAILED. " + ex.getMessage();
-            System.out.println("ERROR: " + errMsg);
-            throw new RuntimeException(errMsg);
-        }
-        return map;
-    }
-
     /**
      * Get class index.
      * For test only.
