@@ -2,3 +2,5 @@
 
 # How to build?
 #mvn clean package
+
+声明：此代码只能用于学习研究。
