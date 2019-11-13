@@ -12,6 +12,10 @@ import org.opencv.imgproc.Imgproc;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author SkyPeace
+ * The class for image data preprocessing.
+ */
 public class ImageDataPreprocessing {
     public static final int IMAGE_DECODER_OPENCV = 0;
     public static final int IMAGE_DECODER_TURBOJPEG = 1;
@@ -52,7 +56,8 @@ public class ImageDataPreprocessing {
     }
 
     /**
-     * Decode image data by turbojpeg
+     * Decode image data by turbojpeg. It is more fast then OpenCV decoder.
+     * Please refer to https://libjpeg-turbo.org/About/Performance for performance comparison.
      * @param imageData
      * @return
      * @throws Exception
@@ -217,6 +222,7 @@ public class ImageDataPreprocessing {
      * @param src
      * @param outWidth
      * @param outHeight
+     * @param enableMultipleVoters
      * @return
      */
     private List<Mat> cropAndResizeImage(Mat src, int outWidth, int outHeight, boolean enableMultipleVoters)
@@ -258,7 +264,7 @@ public class ImageDataPreprocessing {
     }
 
     /**
-     * Another implements of INCEPTION_PREPROCESS
+     * Another implements of INCEPTION_PREPROCESS. For experimental only.
      * @param src
      * @param outWidth
      * @param outHeight
