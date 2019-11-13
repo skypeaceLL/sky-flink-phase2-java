@@ -1,6 +1,6 @@
 # Apache Flink极客挑战赛——垃圾图片分类—复赛Java code
 
-# 1. How to build?
+# 1. How to build
 
 ## 安装 garbage_image_util 包到本地maven仓库 
 ```bash
