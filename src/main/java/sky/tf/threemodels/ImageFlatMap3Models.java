@@ -47,7 +47,7 @@ public class ImageFlatMap3Models extends RichFlatMapFunction<ImageData, IdLabel>
         System.out.println(String.format("ImageFlatMap.open(): optimizedOpenVinoModel3Dir is %s",
                 this.model3Params.getOptimizedModelDir()));
 
-        //Step2: Load optimized OpenVino model from files (HDFS). (Cost about 2 seconds each model, quick enough)
+        //Step2: Load optimized OpenVino model from files (HDFS). (Cost about 3 seconds total models, quickly enough)
         this.model1 = ImageModelLoader3Models.getInstance().loadOpenVINOModel1Once(this.model1Params);
         this.model2 = ImageModelLoader3Models.getInstance().loadOpenVINOModel2Once(this.model2Params);
         this.model3 = ImageModelLoader3Models.getInstance().loadOpenVINOModel3Once(this.model3Params);
@@ -93,7 +93,8 @@ public class ImageFlatMap3Models extends RichFlatMapFunction<ImageData, IdLabel>
     {
         System.out.println(String.format("getNumberOfParallelSubtasks: %s",
                 this.getRuntimeContext().getNumberOfParallelSubtasks()));
-        model1.release();
+        if(model1!=null)
+            model1.release();
         if(model2!=null)
             model2.release();
         if(model3!=null)

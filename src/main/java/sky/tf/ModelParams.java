@@ -1,5 +1,9 @@
 package sky.tf;
 
+/**
+ * @author SkyPeace
+ * The class for configure model's parameters.
+ */
 public class ModelParams implements java.io.Serializable
 {
     private String modelType; //resnet, inception

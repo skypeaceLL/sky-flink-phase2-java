@@ -1,6 +1,10 @@
 package sky.tf;
 
-public class PredictionResult {
+/**
+ * @author SkyPeace
+ * The class for store prediction result.
+ */
+public class PredictionResult implements java.io.Serializable{
 
     private Integer predictionId;
     private float probability;
