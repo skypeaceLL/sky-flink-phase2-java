@@ -10,11 +10,11 @@ import java.util.*;
 
 /**
  * @author SkyPeace
- * The supportive for image classification prediction.
+ * The supportive for image classification prediction. Experimental only.
  */
 public class ImagePredictSupportiveMultipleModels
 {
-    //private Logger logger = LoggerFactory.getLogger(ImageModelLoader3Models.class);
+    //private Logger logger = LoggerFactory.getLogger(ImagePredictSupportiveMultipleModels.class);
     private List<ModelParams> modelParamsList;
     private List<GarbageClassificationModel> modelList;
 
@@ -213,7 +213,7 @@ public class ImagePredictSupportiveMultipleModels
     }
 
     /**
-     * Get image class index
+     * Get image class human string.
      * @return
      */
     private String getImageHumanString(Integer id)

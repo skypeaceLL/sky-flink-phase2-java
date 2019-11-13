@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * @author SkyPeace
- * The Map operator for predict the class of image.
+ * The Map operator for predict the class of image. Experimental only.
  */
 public class ImageFlatMapMultipleModels extends RichFlatMapFunction<ImageData, IdLabel> {
     private String imageModelPath = System.getenv(ConfigConstant.IMAGE_MODEL_PATH);
@@ -38,7 +38,8 @@ public class ImageFlatMapMultipleModels extends RichFlatMapFunction<ImageData, I
         System.out.println(String.format("ImageFlatMap.open(): modelInferencePath is %s", this.modelInferencePath));
         System.out.println(String.format("ImageFlatMap.open(): imageModelPathPackagePath is %s", this.imageModelPathPackagePath));
 
-        //Step2: Load optimized OpenVino model from files (HDFS). (Cost about 2 seconds each model, quick enough)
+        //Step2: Load optimized OpenVino model from files (HDFS).
+        // Cost about 1 seconds each model, quick enough. But it is not good solution to use too many models in client.
         modelList = new ArrayList<GarbageClassificationModel>();
         for(ModelParams modelParams:modelParamsList) {
             GarbageClassificationModel model =

@@ -25,7 +25,7 @@ import java.util.Map;
 
 /**
  * @author SkyPeace
- * The model loader
+ * The model loader. Experimental only.
  */
 public class ImageModelLoaderMultipleModels {
     private Logger logger = LoggerFactory.getLogger(ImageModelLoaderMultipleModels.class);

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The class use for generate optimized OpenVino models (Multiple different models for prediction)
+ * The class use for generate optimized OpenVino models (Multiple different models for prediction). Experimental only.
  * @author SkyPeace
  */
 public class OpenVinoModelGeneratorMultipleModels {
@@ -39,6 +39,7 @@ public class OpenVinoModelGeneratorMultipleModels {
         try {
             //Generate optimized OpenVino model
             this.modelParamsList = new ArrayList<ModelParams>();
+            //Here only generate 5 models for test.
             for(int i=0;i<5;i++) {
                 String tfModelPath = modelInferencePath + File.separator + "SavedModel/model" + i;
                 String optimizedOpenVinoModelDir = imageModelPackageDir;
