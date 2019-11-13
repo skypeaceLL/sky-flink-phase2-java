@@ -64,19 +64,17 @@ public class GarbageClassificationModel implements IModel, java.io.Serializable
         referenceQueue.poll();
         if(referenceQueue.peek()==null)
         {
-            //Thread.sleep(100);
-            if (inferenceModel != null) {
+            if (openVINOModel != null) {
+                System.out.println("Release openVINOModel ...");
+                openVINOModel.release();
+                System.out.println("openVINOModel released");
+            }else if (inferenceModel != null) {
                 System.out.println("Release inferenceModel ...");
                 inferenceModel.doRelease();
                 System.out.println("inferenceModel released");
             }
-            else if (openVINOModel != null) {
-                System.out.println("Release openVINOModel ...");
-                openVINOModel.release();
-                System.out.println("openVINOModel released");
-            }
             else
-                throw new RuntimeException("inferenceModel and openVINOModel are both null.");
+                throw new RuntimeException("openVINOModel and inferenceModel are both null.");
         }
     }
 
