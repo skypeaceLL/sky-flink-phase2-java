@@ -146,6 +146,7 @@ public class ImagePredictSupportive3Models
         PredictionResult thirdResult = this.getSingleResult(thirdResults);
         Integer thirdPredictionId = thirdResult.getPredictionId();
 
+        /*
         if (thirdResult.getProbability() >= preferableThreshold1)
         {
             if (!thirdPredictionId.equals(primaryPredictionId)) {
@@ -155,6 +156,7 @@ public class ImagePredictSupportive3Models
             }
             return thirdPredictionId;
         }
+        */
 
         if(thirdPredictionId.equals(primaryPredictionId)&&thirdPredictionId.equals(secondaryPredictionId))
         {

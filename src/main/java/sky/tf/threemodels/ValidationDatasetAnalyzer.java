@@ -80,11 +80,13 @@ public class ValidationDatasetAnalyzer {
                         continue;
                     }
 
+                    /*
                     if (model3Result.getProbability() >= threshold1)
                     {
                         finalResults.add(model3Result.getPredictionId());
                         continue;
                     }
+                    */
 
                     if (model1Result.getPredictionId().equals(model2Result.getPredictionId())
                             && model1Result.getPredictionId().equals(model3Result.getPredictionId())) {
