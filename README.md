@@ -1,4 +1,4 @@
-# Apache Flink极客挑战赛——垃圾图片分类 -- 复赛Java code
+# Apache Flink极客挑战赛——垃圾图片分类—复赛Java code
 
 # 1. How to build?
 
