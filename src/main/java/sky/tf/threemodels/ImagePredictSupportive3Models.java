@@ -16,7 +16,7 @@ import java.util.*;
  */
 public class ImagePredictSupportive3Models
 {
-    private Logger logger = LoggerFactory.getLogger(ImageModelLoader3Models.class);
+    private Logger logger = LoggerFactory.getLogger(ImagePredictSupportive3Models.class);
     final long MAX_PROCESSING_TIME = 400; //ms. 400
 
     private GarbageClassificationModel model1;
