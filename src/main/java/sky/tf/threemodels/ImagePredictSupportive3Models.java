@@ -305,7 +305,7 @@ public class ImagePredictSupportive3Models
     }
 
     /**
-     * Get image class index
+     * Get image class human string
      * @return
      */
     private String getImageHumanString(Integer id)
@@ -315,7 +315,6 @@ public class ImagePredictSupportive3Models
 
     /**
      * For first time warm-dummy check only.
-     * @param model
      * @throws Exception
      */
     public void firstTimeDummyCheck() throws Exception
@@ -330,7 +329,12 @@ public class ImagePredictSupportive3Models
         this.loadTurboJpeg();
     }
 
-    //For first time warm-dummy check only.
+    /**
+     * For first time warm-dummy check only.
+     * @param pModel
+     * @param pModelParams
+     * @throws Exception
+     */
     private void checkModel(GarbageClassificationModel pModel, ModelParams pModelParams) throws Exception
     {
         if(pModel == null) {
