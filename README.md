@@ -7,6 +7,7 @@
 sh install_jar.sh
 ```
 注：garbage_image_util 由天池提供，详见天池比赛的readme
+    
 
 1.2 build package (jar)
 ```bash
