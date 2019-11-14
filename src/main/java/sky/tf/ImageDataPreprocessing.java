@@ -56,7 +56,7 @@ public class ImageDataPreprocessing {
     }
 
     /**
-     * Decode image data by turbojpeg. It is more fast then OpenCV decoder.
+     * Decode image data by turbojpeg. It is more fast than OpenCV decoder.
      * Please refer to https://libjpeg-turbo.org/About/Performance for performance comparison.
      * @param imageData
      * @return
@@ -89,7 +89,7 @@ public class ImageDataPreprocessing {
     }
 
     /**
-     * Decode jpeg, resize image and convert to float array (RGB) for JTensor list need.
+     * Preprocess image data and convert to float array (RGB) for JTensor list need.
      * @param matRGB
      * @param preprocessType
      * @param enableMultipleVoters
