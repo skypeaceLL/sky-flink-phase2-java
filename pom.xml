@@ -33,7 +33,7 @@ under the License.
 		<flink.version>1.8.1</flink.version>
 		<java.version>1.8</java.version>
 		<scala.binary.version>2.11</scala.binary.version>
-		<hadoop.version>2.7.7</hadoop.version>
+		<hadoop.version>2.10.1</hadoop.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 	</properties>
